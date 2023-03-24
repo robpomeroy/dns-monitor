@@ -1,0 +1,14 @@
+﻿DNS,Type,Find,Count,Match,Notes
+pomeroy.me,TXT,v=spf1 include:_spf.google.com ~all,1,,Make sure there's only one SPF record and it matches this string
+pomeroy.me,TXT,,3,,Make sure we have exactly this many TXT records
+pomeroy.me,MX,aspmx.l.google.com,1,10,"Make sure this MX record exists, with priority 10"
+pomeroy.me,MX,alt1.aspmx.l.google.com,1,20,"Make sure this MX record exists, with priority 20"
+pomeroy.me,MX,alt2.aspmx.l.google.com,1,30,"Make sure this MX record exists, with priority 30"
+pomeroy.me,MX,aspmx2.googlemail.com,1,40,"Make sure this MX record exists, with priority 40"
+pomeroy.me,MX,aspmx3.googlemail.com,1,50,"Make sure this MX record exists, with priority 50"
+pomeroy.me,A,104.21.4.209,1,,This A record should exist
+pomeroy.me,A,172.67.132.114,1,,This A record should exist
+pomeroy.me,A,,2,,There should be exactly 2 A records at the zone root
+pomeroy.me,NS,bill.ns.cloudflare.com,1,,This NS record should exist
+pomeroy.me,NS,dora.ns.cloudflare.com,1,,This NS record should exist
+pomeroy.me,NS,,2,,There should be exactly 2 NS records

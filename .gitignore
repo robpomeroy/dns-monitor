@@ -1,0 +1,5 @@
+# Ignore temporary Excel files
+~*.xlsx
+
+# Don't commit the user's own configuration file.
+my.conf.ps1
