@@ -38,9 +38,9 @@ SMTP server in `my.conf.ps1`. Run the `Set-Creds.ps1` script to store the SMTP
 credentials securely.
 
 Credentials are stored at `$env:LOCALAPPDATA\creds\DNSMonitor-SMTP.xml`, using
-the Data Protection API (DPAPI). The DPAPI keys the content's the user of the
-script. You must therefore run `Set-Creds.ps1` as the user that will run the
-script (e.g. as a scheduled task).
+the Data Protection API (DPAPI). The DPAPI keys the contents to the user of the
+script. You must therefore run `Set-Creds.ps1` with the user account that will
+run the script (e.g. as a scheduled task).
 
 Read more about
 [DPAPI here](https://learn.microsoft.com/en-us/dotnet/standard/security/how-to-use-data-protection).
