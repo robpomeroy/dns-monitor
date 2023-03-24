@@ -7,6 +7,10 @@ eveything matches.
 The main script (`Start-DNSMonitor.ps1`) also sends an email if errors are
 encountered.
 
+![DNS Monitor mascot - the Watchful Koala](images/Watchful-Koala.png)
+
+-- *the Watchful Koala has got your back*
+
 ## Usage
 
 1. Create a CSV containing your required tests.
