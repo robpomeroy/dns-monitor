@@ -53,11 +53,12 @@ https://github.com/robpomeroy/dns-monitor
 
 Author: Rob Pomeroy
 Licence: GPL3
-Version: v0.1.0-alpha [Set also in the $Version variable]
-Date:    23 March 2023
+Version: v0.2.0-alpha [Set also in the $Version variable]
+Date:    27 March 2023
 
 Version history:
 
+    v0.2.0 - 27 March 2023 - incorporate ScriptAnalyzer review suggestions
     v0.1.0 - 24 March 2023 - alpha release
 
 TODO:
@@ -77,7 +78,7 @@ TODO:
 ################
 
 Set-StrictMode -Version 3.0
-$Version = 'v0.1.0-alpha'
+$Version = 'v0.2.0-alpha'
 
 # Load functions
 . "$PSScriptRoot\functions\Send-Email.ps1"
@@ -170,7 +171,7 @@ ForEach ($Test in $Tests) {
             Where-Object -Property $FilterNames[$Test.("Type")] -eq $Test.("Find")
 
     }
-    
+
     If (($Records | Measure-Object).Count -eq 0 -and $Test.("Count") -ne 0) {
 
         $strValues = @(
@@ -180,10 +181,10 @@ ForEach ($Test in $Tests) {
 
         # We didn't get any matching records for this test, but we should have
         $DNSErrors.Add("Couldn't get the {0} record(s) for {1}." -f $strValues )
-        
+
     }
     Else {
-        
+
         # Test quantity, if the "Count" column is set - there should be exactly this many records
         If (-Not [string]::IsNullOrEmpty($Test.("Count"))) {
             If (@($Records).Count -ne $Test.("Count")) {
