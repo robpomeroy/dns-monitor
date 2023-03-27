@@ -26,6 +26,8 @@ The script uses the `dns-monitor.csv` file to define the records to monitor.
 `dns-monitor.xlsx` is a template for this file. Make changes to the Excel
 spreadsheet and then export as the CSV file for use by the script.
 
+![sample table](images/sample-table.png)
+
 ## Configuration
 
 Copy `my.conf.example.ps1` to `my.conf.ps1` and edit to suit your needs. This is
